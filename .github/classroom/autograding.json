@@ -1,0 +1,85 @@
+{
+  "tests": [
+    {
+      "name": "put test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_put test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "contains test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_contains test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "delete test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_delete test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "put after delete test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_put_after_delete test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "make empty test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_makeEmpty test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "in order test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_OPTIONAL_inOrder test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "preorder test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_OPTIONAL_preOrder test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    },
+    {
+      "name": "postorder test",
+      "setup": "mvn compile",
+      "run": "mvn -Dtest=BinarySearchTreeTest#test_OPTIONAL_postOrder test",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 1,
+      "points": 10
+    }
+
+  ]
+}
