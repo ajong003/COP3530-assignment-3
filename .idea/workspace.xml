@@ -75,21 +75,31 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.test_contains" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinarySearchTreeTest.test_OPTIONAL_inOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COP3530-Module-3-Template" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="test_contains" />
+      <option name="METHOD_NAME" value="test_OPTIONAL_inOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="BinarySearchTreeTest.test_put" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="BinarySearchTreeTest.test_OPTIONAL_postOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="COP3530-Module-3-Template" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
-      <option name="METHOD_NAME" value="test_put" />
+      <option name="METHOD_NAME" value="test_OPTIONAL_postOrder" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="BinarySearchTreeTest.test_OPTIONAL_preOrder" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="COP3530-Module-3-Template" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="BinarySearchTreeTest" />
+      <option name="METHOD_NAME" value="test_OPTIONAL_preOrder" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -98,9 +108,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.BinarySearchTreeTest" />
+        <item itemvalue="JUnit.BinarySearchTreeTest.test_OPTIONAL_postOrder" />
+        <item itemvalue="JUnit.BinarySearchTreeTest.test_OPTIONAL_preOrder" />
+        <item itemvalue="JUnit.BinarySearchTreeTest.test_OPTIONAL_inOrder" />
         <item itemvalue="Application.BinarySearchTree" />
-        <item itemvalue="JUnit.BinarySearchTreeTest.test_put" />
-        <item itemvalue="JUnit.BinarySearchTreeTest.test_contains" />
       </list>
     </recent_temporary>
   </component>

@@ -10,7 +10,7 @@ public class BinarySearchTree implements BSTInterface {
         BinarySearchTree tree = new BinarySearchTree();
 
         // Optional code for extra points
-        boolean Optional = false;
+        boolean Optional = true;
 
         // Testing for inserting words into the tree
         // Prints inorder traversal of tree
@@ -89,15 +89,21 @@ public class BinarySearchTree implements BSTInterface {
     } // Removes a String from the BST. If the String isn't in the BST, does nothing.
 
     public MyQueue inOrder(){
-        return new MyQueue();
+        MyQueue queue = new MyQueue();
+        inOrderRecursive(root,queue);
+        return queue;
     } // OPTIONAL, Returns a queue with the elements in order
 
     public MyQueue preOrder(){
-        return new MyQueue();
+        MyQueue queue = new MyQueue();
+        preOrderRecursive(root,queue);
+        return queue;
     } // OPTIONAL, Returns a queue with the elements pre order
 
     public MyQueue postOrder(){
-        return new MyQueue();
+        MyQueue queue = new MyQueue();
+        postOrderRecursive(root,queue);
+        return queue;
     } // OPTIONAL, Returns a queue with the elements post order
 
     // TODO: Fill this in and call it from contains()
@@ -193,17 +199,44 @@ public class BinarySearchTree implements BSTInterface {
 
     // TODO: Fill this in and call it from inOrder()
     protected void inOrderRecursive(BSTNode node, MyQueue queue) {
+        if(node!=null){
+            if(node.left!=null){
+                inOrderRecursive(node.left,queue);
+            }
+            queue.enqueue(node.item);
+            if(node.right!=null){
+                inOrderRecursive(node.right,queue);
+            }
+        }
+
 
     }
 
     // TODO: Fill this in and call it from preOrder()
     protected void preOrderRecursive(BSTNode node, MyQueue queue) {
-
+        if(node!=null){
+            queue.enqueue(node.item);
+            if(node.left!=null){
+                preOrderRecursive(node.left,queue);
+            }
+            if(node.right!=null){
+                preOrderRecursive(node.right,queue);
+            }
+        }
     }
 
     // TODO: Fill this in and call it from postOrder()
     protected void postOrderRecursive(BSTNode node, MyQueue queue) {
+        if(node!=null){
 
+            if(node.left!=null){
+                postOrderRecursive(node.left,queue);
+            }
+            if(node.right!=null){
+                postOrderRecursive(node.right,queue);
+            }
+            queue.enqueue(node.item);
+        }
     }
 
     // Prints out the tree structure, using indenting to show the different levels
