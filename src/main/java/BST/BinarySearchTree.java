@@ -63,23 +63,29 @@ public class BinarySearchTree implements BSTInterface {
     }
 
     public boolean isEmpty(){
-        return true;
+        if(root==null){
+            return true;
+        }else{
+            return false;
+        }
+
     } // returns true if the BST is empty, false otherwise
 
     public void makeEmpty(){
-
+        root=null;
     } // Empties the BST
 
     public boolean contains(String s){
-        return true;
+
+        return recursiveSearch(root,s);
     } // Returns true if the BST contains the String, false otherwise
 
     public void put(String s){
-
+        root=recursiveInsert(root,s);
     } // Adds a String to the BST. If the String is already in the BST, does nothing.
 
     public void delete(String s){
-
+        root=recursiveRemove(root,s);
     } // Removes a String from the BST. If the String isn't in the BST, does nothing.
 
     public MyQueue inOrder(){
@@ -96,27 +102,91 @@ public class BinarySearchTree implements BSTInterface {
 
     // TODO: Fill this in and call it from contains()
     protected boolean recursiveSearch(BSTNode node, String s) {
-        return true;
+
+        if(node==null){
+            return false;
+        }
+        int compare = s.compareTo(node.item);
+        if(compare==0){
+            return true;
+        }
+        else if(compare<0){
+            return recursiveSearch(node.left,s);
+        }
+        else if(compare>0){
+            return recursiveSearch(node.right,s);
+        }
+        return false;
     }
 
     // TODO: Fill this in and call it from put()
     protected BSTNode recursiveInsert(BSTNode node, String s) {
-        return new BSTNode("");
+
+        if(node==null){
+            return new BSTNode(s);
+        }
+
+        int compare = s.compareTo(node.item);
+        if(compare<0){
+            node.left=recursiveInsert(node.left,s);
+        }
+        else if(compare>0){
+            node.right=recursiveInsert(node.right,s);
+        }
+        return node;
     }
 
     // TODO: Fill this in and call it from delete()
     protected BSTNode recursiveRemove(BSTNode node, String s) {
-        return new BSTNode("");
+       if(node==null){
+           return node;
+       }
+       int compare = s.compareTo(node.item);
+       if(compare==0){
+           node=deleteNode(node);
+       }
+       else if(compare<0){
+            node.left=recursiveRemove(node.left, s);
+        }
+       else if(compare>0){
+            node.right=recursiveRemove(node.right, s);
+       }
+       return node;
+
     }
 
     // TODO: Fill this in and call it from recursiveRemove()
     protected BSTNode deleteNode(BSTNode node) {
-        return new BSTNode("");
+        //leaf
+        if(node.left==null && node.right==null){
+            return null;
+
+        }
+        else if(node.left!=null && node.right!= null){
+            String smallest = getSmallest(node.right);
+            node.item=smallest;
+            node.right=recursiveRemove(node.right,smallest);
+        }
+        else if(node.left!=null){
+            node=node.left;
+        }
+        else if(node.right!=null){
+            node=node.right;
+        }
+        return node;
+
     }
 
     // TODO: Fill this in and call it from deleteNode()
     protected String getSmallest(BSTNode node) {
-        return "";
+
+        String smallest=node.item;
+        while(node.left!=null){
+            smallest=node.left.item;
+            node=node.left;
+        }
+
+        return smallest;
     }
 
     // Extra Credit

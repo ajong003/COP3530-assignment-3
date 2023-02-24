@@ -9,5 +9,7 @@ public class BSTNode
 
     BSTNode(String key) {
         this.item = key;
+        this.left=null;
+        this.right=null;
     }
 }
